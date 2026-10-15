@@ -74,3 +74,41 @@
 .olivia-activity-card{padding-bottom:27px}
 .olivia-activity-card>strong{font-size:13px;line-height:16px;text-align:center;display:block;width:100%;flex:0 0 auto}
 @media(max-height:510px) and (min-width:700px){.olivia-chore-card{flex-basis:145px;height:145px;min-height:145px}.olivia-chore-picture img{max-height:104px}.olivia-activity-card{padding-bottom:7px}.olivia-activity-card>strong{font-size:12px}}
+
+/* V5.2.1: keep activity titles and event times in separate rows.
+   In V5.2 the time was absolutely positioned and could overlap the title,
+   especially at the Echo Show's compact landscape viewport. */
+.olivia-activity-card{
+  padding:7px;
+  gap:2px;
+  justify-content:flex-start;
+}
+.olivia-activity-card>img,
+.olivia-activity-card .olivia-activity-art{
+  flex:1 1 auto;
+  min-height:0;
+  height:auto;
+  width:100%;
+}
+.olivia-activity-card>strong{
+  flex:0 0 auto;
+  width:100%;
+  margin:0;
+  line-height:1.15;
+  overflow-wrap:anywhere;
+}
+.olivia-activity-card>small{
+  position:static;
+  display:block;
+  flex:0 0 auto;
+  width:100%;
+  margin:0;
+  line-height:1.15;
+  text-align:center;
+  font-size:12px;
+}
+@media(max-height:510px) and (min-width:700px){
+  .olivia-activity-card{padding:5px;gap:2px}
+  .olivia-activity-card>strong{font-size:12px}
+  .olivia-activity-card>small{font-size:11px}
+}
