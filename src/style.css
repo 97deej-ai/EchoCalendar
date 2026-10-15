@@ -10,3 +10,6 @@
 .event-image-choices img{width:65px;height:65px;object-fit:contain}
 .event-image-preview{display:flex;align-items:center;gap:12px}
 .event-image-preview img{width:92px;height:92px;object-fit:contain;border-radius:8px;background:white}
+
+/* V5 adult-only chore editor */
+.chore-form{display:flex;flex-wrap:wrap;align-items:end;gap:10px;margin:12px 0 18px}.chore-form>label{flex:1 1 170px}.chore-form input{max-width:100%}.chore-days{display:flex;flex-wrap:wrap;gap:8px;align-items:center;flex:1 1 100%}.chore-days label{display:flex;gap:3px;align-items:center;font-size:13px}.chore-days input{width:auto}.chore-manage-icon{font-size:25px}.chore-manage-row{flex-wrap:wrap;gap:6px}.chore-manage-row button{padding:6px 9px}

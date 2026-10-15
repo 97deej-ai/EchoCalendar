@@ -45,3 +45,14 @@
 .olivia-activity-card .olivia-event-emoji{line-height:1;font-size:clamp(50px,8vw,85px)}
 @media(max-height:510px) and (min-width:700px){.olivia-activity-card{flex-basis:175px;padding:5px 5px 23px;height:175px}.olivia-activity-card>img,.olivia-activity-art img{height:100%}.olivia-activity-card .olivia-event-emoji{line-height:1}}
 @media(max-width:540px){.olivia-activity-card{flex-basis:44vw}.olivia-activity-card>img,.olivia-activity-art img{height:100%}}
+
+/* V5: compact Kindergarten lunch tile and child chore checklist */
+.olivia-special-grid{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px}
+.olivia-lunch-inline{display:flex;align-items:center;gap:12px;background:#fff2d9;border-radius:15px;padding:8px;max-width:350px;min-width:230px}
+.olivia-lunch-square{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:112px;height:112px;flex-shrink:0;background:#fff;border:2px solid #f0d29c;border-radius:14px;color:#774b23;cursor:pointer}
+.olivia-lunch-square span{font-size:36px}.olivia-lunch-square strong{font-size:15px}.olivia-lunch-square small{font-size:11px}
+.olivia-lunch-copy{min-width:0;color:#244663}.olivia-lunch-copy p{margin:4px 0;font-weight:700}.olivia-lunch-copy small{display:block}.olivia-speech-error{color:#9d2626}
+.olivia-chores{width:100%;padding:4px 10px}.olivia-chore-summary{text-align:center;font-size:18px;font-weight:800;color:#245782;margin-bottom:10px}
+.olivia-chore-grid{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;gap:12px}.olivia-chore-card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex:0 0 155px;min-height:150px;background:#fff;border:3px solid #e0edf8;border-radius:18px;color:#214c6c;box-shadow:0 3px 10px #27486920;cursor:pointer}
+.olivia-chore-card.is-complete{border-color:#66c58b;background:#edfff3}.olivia-chore-picture{font-size:52px}.olivia-chore-check{position:absolute;top:6px;right:9px;font-size:22px}.olivia-chore-card strong{font-size:14px;text-align:center;padding:0 5px}.olivia-chore-empty{text-align:center}
+@media(max-height:510px) and (min-width:700px){.olivia-chore-grid{gap:8px}.olivia-chore-card{flex-basis:145px;min-height:125px}.olivia-chore-picture{font-size:42px}.olivia-chore-summary{margin-bottom:5px;font-size:15px}.olivia-special img{max-height:112px}.olivia-lunch-square{height:105px;width:105px}.olivia-lunch-inline{min-width:215px}}
