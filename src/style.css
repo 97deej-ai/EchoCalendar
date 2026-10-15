@@ -20,3 +20,11 @@
 .chore-image-preview{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .chore-image-preview img{height:90px;width:90px;object-fit:contain;border-radius:12px;border:1px solid #cad6e3;background:white}
 .chore-manage-icon img{height:42px;width:42px;object-fit:cover;border-radius:9px;vertical-align:middle}
+
+/* V5.2 phone-friendly default illustration editor */
+.picture-manager-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.picture-manager-card{display:flex;flex-direction:column;gap:7px;align-items:center;padding:10px;border:1px solid #d6e3ed;border-radius:12px;background:#fff}
+.picture-manager-card img{width:100%;height:115px;object-fit:contain}
+.picture-manager-card label{font-size:12px;max-width:100%;overflow:hidden}
+.picture-manager-card input{width:100%;font-size:11px}
+.picture-manager-card button{font-size:12px}
