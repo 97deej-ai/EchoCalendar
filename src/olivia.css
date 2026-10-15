@@ -5,3 +5,32 @@
 /* Calendar events shown on Olivia's day and week screens. */
 .olivia-events-section{margin:14px auto 0;max-width:900px}.olivia-events-section h3{margin:8px 0;font-size:18px}.olivia-event-tiles{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.olivia-event-tile{display:flex;flex-direction:column;align-items:center;gap:3px;background:white;color:#174366;border:2px solid #fff;border-radius:18px;padding:8px;width:clamp(140px,26vw,210px);box-shadow:0 4px 12px #194a6c20}.olivia-event-tile img{width:100%;height:120px;object-fit:contain}.olivia-event-tile strong{text-align:center;font-size:16px}.olivia-event-tile small{color:#527c9b;font-size:13px}.olivia-event-emoji{font-size:70px;display:block;line-height:120px}.olivia-week-events{display:flex;justify-content:center;gap:3px;align-items:center;flex-wrap:wrap}.olivia-week-events img{width:31px;height:31px;object-fit:contain}.olivia-week-events span{font-size:19px}.olivia-week-events b{font-size:10px}.olivia-event-detail{text-align:center}.olivia-event-detail img{max-height:190px;max-width:100%;object-fit:contain}.olivia-event-detail .olivia-event-emoji{font-size:80px}.olivia-event-detail p{white-space:pre-wrap;overflow-wrap:anywhere}.olivia-tiles{flex-wrap:wrap}.olivia-tile img{object-fit:contain;object-position:center}
 @media(max-height:510px) and (min-width:700px){.olivia-event-tile{width:145px;padding:5px}.olivia-event-tile img{height:90px}.olivia-event-emoji{line-height:90px;font-size:55px}.olivia-week-events img{width:25px;height:25px}.olivia-week-day{min-height:145px}}
+
+/* V3: unified, horizontally scrollable My Day activity cards */
+.olivia-day-row{display:flex;align-items:flex-start;justify-content:flex-start;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding:8px 4px 14px;min-height:0;scrollbar-width:thin}
+.olivia-activity-card{flex:0 0 clamp(155px,27vw,235px);min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;border:2px solid #fff;background:#fff;border-radius:20px;padding:7px;color:#174366;box-shadow:0 4px 14px #194a6c2b;overflow:hidden}
+.olivia-activity-card img{width:100%;height:clamp(150px,29vh,220px);object-fit:contain;object-position:center;display:block}
+.olivia-activity-art{width:100%;display:flex;justify-content:center;align-items:center}
+.olivia-activity-card small{color:#416e8c;font-size:13px;font-weight:700}
+.olivia-activity-card strong{font-size:14px;line-height:1.15;text-align:center}
+.olivia-activity-card .olivia-event-emoji{font-size:70px;line-height:clamp(150px,29vh,220px)}
+/* Show the user's chosen labeled artwork as-is; no duplicate title under the image. */
+.olivia-special{background:#fff;border-radius:14px;padding:5px;min-width:0;flex:0 1 170px;align-items:center;justify-content:center}
+.olivia-special img{display:block;width:100%;max-height:185px;object-fit:contain}
+.olivia-special-grid{justify-content:center;flex-wrap:nowrap}
+.olivia-week-day{min-height:135px}
+.olivia-week-events{margin-top:3px}
+.olivia-week-events img{width:33px;height:36px}
+.olivia-temperature{font-size:14px;font-weight:800;margin-left:4px}
+/* Gentle weather-aware illustrations made with layered CSS; offline/default stays pleasant. */
+.olivia-shell{background:linear-gradient(165deg,#9edcff 0%,#d3eff0 68%,#f3f2ce 100%);transition:background .35s}
+.olivia-shell.weather-sunny{background:radial-gradient(circle at 90% 16%,#fff7af 0%,#ffefad 8%,transparent 21%),linear-gradient(165deg,#7fd0ff 0%,#c1eaff 58%,#c9e9bd 100%)}
+.olivia-shell.weather-cloudy{background:radial-gradient(ellipse at 78% 17%,#fff 0%,#ffffffb5 17%,transparent 33%),linear-gradient(165deg,#afc9dd 0%,#d5e2eb 55%,#c6dfd5 100%)}
+.olivia-shell.weather-rainy{background:repeating-linear-gradient(112deg,transparent 0px,transparent 46px,#ffffff35 47px,#ffffff35 49px,transparent 50px,transparent 94px),linear-gradient(160deg,#789ab9 0%,#abc6d8 55%,#d3dfdd 100%)}
+.olivia-shell.weather-snowy{background:radial-gradient(circle at 20% 25%,#fff 0px,#fff 4px,transparent 5px),radial-gradient(circle at 70% 40%,#fff 0px,#fff 5px,transparent 6px),linear-gradient(155deg,#a9cce9 0%,#e4f3ff 68%,#f5fbff 100%)}
+.olivia-shell.weather-night{background:radial-gradient(circle at 87% 16%,#fff7d3 0%,#fff7d3 18px,transparent 20px),linear-gradient(160deg,#263c78 0%,#536c9c 57%,#899cc0 100%);color:#fff}
+.olivia-shell.weather-night .olivia-head{background:#253c6ac7}
+.olivia-shell.weather-night .olivia-head small{color:#e1e8ff}
+.olivia-shell.weather-night .olivia-week-nav strong{color:#fff}
+@media(max-height:510px) and (min-width:700px){.olivia-head{padding:6px 14px}.olivia-head h1{font-size:24px}.olivia-body{padding:6px 12px}.olivia-view-switch{margin:0 0 4px}.olivia-view-switch button{padding:5px 15px}.olivia-activity-card{flex-basis:175px;padding:5px}.olivia-activity-card img{height:205px}.olivia-activity-card .olivia-event-emoji{line-height:205px}.olivia-day-row{gap:10px;padding-top:4px}.olivia-week-day{min-height:124px}.olivia-week-grid{gap:5px}.olivia-special img{max-height:120px}.olivia-special{flex-basis:130px}}
+@media(max-width:540px){.olivia-activity-card{flex-basis:44vw}.olivia-activity-card img{height:160px}.olivia-special img{max-height:120px}.olivia-special{flex-basis:120px}.olivia-special-grid{gap:5px}}
