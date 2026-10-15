@@ -13,3 +13,10 @@
 
 /* V5 adult-only chore editor */
 .chore-form{display:flex;flex-wrap:wrap;align-items:end;gap:10px;margin:12px 0 18px}.chore-form>label{flex:1 1 170px}.chore-form input{max-width:100%}.chore-days{display:flex;flex-wrap:wrap;gap:8px;align-items:center;flex:1 1 100%}.chore-days label{display:flex;gap:3px;align-items:center;font-size:13px}.chore-days input{width:auto}.chore-manage-icon{font-size:25px}.chore-manage-row{flex-wrap:wrap;gap:6px}.chore-manage-row button{padding:6px 9px}
+
+/* V5.1 adult chore picture management */
+.chore-image-editor{display:flex;flex-direction:column;gap:7px;min-width:0}
+.chore-image-editor input[type=file]{max-width:100%;width:100%}
+.chore-image-preview{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.chore-image-preview img{height:90px;width:90px;object-fit:contain;border-radius:12px;border:1px solid #cad6e3;background:white}
+.chore-manage-icon img{height:42px;width:42px;object-fit:cover;border-radius:9px;vertical-align:middle}

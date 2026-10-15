@@ -56,3 +56,11 @@
 .olivia-chore-grid{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;gap:12px}.olivia-chore-card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex:0 0 155px;min-height:150px;background:#fff;border:3px solid #e0edf8;border-radius:18px;color:#214c6c;box-shadow:0 3px 10px #27486920;cursor:pointer}
 .olivia-chore-card.is-complete{border-color:#66c58b;background:#edfff3}.olivia-chore-picture{font-size:52px}.olivia-chore-check{position:absolute;top:6px;right:9px;font-size:22px}.olivia-chore-card strong{font-size:14px;text-align:center;padding:0 5px}.olivia-chore-empty{text-align:center}
 @media(max-height:510px) and (min-width:700px){.olivia-chore-grid{gap:8px}.olivia-chore-card{flex-basis:145px;min-height:125px}.olivia-chore-picture{font-size:42px}.olivia-chore-summary{margin-bottom:5px;font-size:15px}.olivia-special img{max-height:112px}.olivia-lunch-square{height:105px;width:105px}.olivia-lunch-inline{min-width:215px}}
+
+/* V5.1: lunch artwork and individual chore photos */
+.olivia-lunch-square{position:relative;overflow:hidden;padding:0;background:#fff}
+.olivia-lunch-square img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.olivia-lunch-square small{position:absolute;bottom:0;left:0;right:0;padding:4px 2px;background:#ffffffed;color:#6b3e20;font-weight:700;text-align:center;font-size:10px}
+.olivia-chore-picture{display:flex;align-items:center;justify-content:center;width:86px;height:80px;overflow:hidden}
+.olivia-chore-picture img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+@media(max-height:510px) and (min-width:700px){.olivia-chore-picture{height:68px;width:78px}}
