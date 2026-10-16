@@ -112,3 +112,72 @@
   .olivia-activity-card>strong{font-size:12px}
   .olivia-activity-card>small{font-size:11px}
 }
+
+/* V5.3 — unified Olivia's World kiosk shell, 800 × 480 first. */
+.olivia-v53{height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box}
+.olivia-v53 *{box-sizing:border-box}
+.olivia-v53-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:9px 12px 6px;flex:0 0 auto;min-height:58px}
+.olivia-v53-nav button{border:2px solid #fff;border-radius:22px;background:#fffffff0;color:#174c78;font-size:clamp(15px,2.6vw,22px);font-weight:850;box-shadow:0 3px 9px #255d8530;min-width:0;min-height:43px;white-space:nowrap;cursor:pointer}
+.olivia-v53-nav button.active{background:#2082cf;color:white;border-color:#bde7ff}
+.olivia-v53-content{flex:1 1 auto;min-height:0;overflow:hidden;padding:3px 12px 5px;display:flex;flex-direction:column}
+.olivia-v53-content>.olivia-main{flex:1;min-height:0;display:flex;flex-direction:column}
+.olivia-v53-footer{margin:0 10px 8px;min-height:55px;flex:0 0 55px;background:#fffffff0;border:2px solid #fff;border-radius:18px;box-shadow:0 3px 12px #27557825;display:grid;grid-template-columns:minmax(150px,1.2fr) 85px minmax(280px,2fr);gap:7px;align-items:center;padding:3px 12px;color:#17476e}
+.olivia-footer-date{font-size:clamp(12px,1.85vw,17px);font-weight:850;white-space:nowrap}
+.olivia-footer-now{display:flex;align-items:center;justify-content:center;gap:3px;font-size:22px;border-right:1px solid #d3e5f1}
+.olivia-footer-now strong{font-size:20px}
+.olivia-footer-forecast{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px}
+.olivia-footer-forecast>div{display:flex;align-items:center;justify-content:center;gap:3px;white-space:nowrap;font-size:13px}
+.olivia-footer-forecast small{font-size:11px;font-weight:800}
+.olivia-footer-forecast b{font-size:12px}
+.olivia-v53 .olivia-day-row{flex:1;min-height:0;display:flex;align-content:center;align-items:center;justify-content:center;flex-wrap:wrap;overflow:hidden;gap:10px;padding:3px 3px}
+.olivia-v53 .olivia-activity-card{aspect-ratio:auto;flex:0 1 215px;width:215px;height:min(100%,290px);max-height:290px;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;padding:7px;gap:3px;border-radius:18px;overflow:hidden}
+.olivia-v53 .olivia-activity-card>img,.olivia-v53 .olivia-activity-art{flex:1 1 auto;width:100%;height:0;min-height:0;object-fit:contain}
+.olivia-v53 .olivia-activity-art img{height:100%;width:100%;object-fit:contain}
+.olivia-v53 .olivia-activity-card strong{font-size:clamp(12px,1.7vw,16px);line-height:1.15;flex:0 0 auto;max-height:2.3em;overflow:hidden;overflow-wrap:anywhere}
+.olivia-v53 .olivia-activity-card small{position:static;font-size:12px;line-height:1.2;flex:0 0 auto}
+.olivia-v53 .olivia-count-1 .olivia-activity-card{width:285px;flex-basis:285px}
+.olivia-v53 .olivia-count-2 .olivia-activity-card{width:245px;flex-basis:245px}
+.olivia-v53 .olivia-count-3 .olivia-activity-card{width:220px;flex-basis:220px}
+.olivia-v53 .olivia-count-4 .olivia-activity-card{width:clamp(145px,25vw,200px);flex-basis:clamp(145px,25vw,200px);height:calc(50% - 6px)}
+.olivia-v53 .olivia-count-5 .olivia-activity-card{width:clamp(135px,22vw,180px);flex-basis:clamp(135px,22vw,180px);height:calc(50% - 6px)}
+.olivia-more-activities{background:#fff;border:2px solid #4e9ad4;color:#174c78;border-radius:15px;padding:7px 10px;font-weight:800;cursor:pointer}
+.olivia-v53 .olivia-week-nav{margin:0 0 8px;flex:0 0 auto;gap:8px;font-size:14px}
+.olivia-v53 .olivia-week-nav button{padding:6px 12px}
+.olivia-v53 .olivia-week-grid{flex:1;min-height:0;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}
+.olivia-v53 .olivia-week-day{min-height:0;height:100%;padding:9px 3px;gap:5px;border-radius:16px;overflow:hidden}
+.olivia-v53 .olivia-week-label{font-size:13px}.olivia-v53 .olivia-week-number{font-size:24px}
+.olivia-v53 .olivia-week-icon{font-size:32px}.olivia-v53 .olivia-week-activity{font-size:12px}
+.olivia-v53 .olivia-week-events{margin-top:4px}.olivia-v53 .olivia-week-events img{width:27px;height:30px}
+.olivia-v53 .olivia-chores{flex:1;min-height:0;display:flex;flex-direction:column;padding:1px 4px 4px}
+.olivia-v53 .olivia-chore-summary{margin:0 auto 7px;font-size:15px;display:flex;align-items:center;gap:12px;justify-content:center;flex:0 0 auto}
+.olivia-progress-track{width:125px;height:11px;border-radius:99px;background:#fff;border:1px solid #a7d4ee;overflow:hidden}
+.olivia-progress-track span{display:block;height:100%;background:#22b46a;border-radius:99px;transition:width .2s}
+.olivia-v53 .olivia-chore-grid{flex:1;min-height:0;align-content:center;gap:10px;overflow:hidden}
+.olivia-v53 .olivia-chore-card{flex:0 1 168px;height:230px;min-height:0;padding:8px 7px;gap:4px;border-radius:17px}
+.olivia-v53 .olivia-chore-picture{flex:1;min-height:0;width:100%;height:0}
+.olivia-v53 .olivia-chore-picture img{max-height:none;height:100%;object-fit:contain}
+.olivia-v53 .olivia-chore-card strong{flex:0 0 auto;line-height:1.2;font-size:15px}
+.olivia-v53 .olivia-detail{flex:1;min-height:0;overflow:hidden;max-width:none;width:100%;padding:7px 10px}
+.olivia-kindergarten-v53{display:flex;flex-direction:column;gap:8px}
+.olivia-detail-title{display:flex;align-items:center;justify-content:center;gap:14px;flex:0 0 auto}
+.olivia-detail-title h2{font-size:21px;margin:0}
+.olivia-kindergarten-v53 .olivia-special-grid{flex:1;min-height:0;align-items:stretch;gap:12px;flex-wrap:nowrap}
+.olivia-kindergarten-v53 .olivia-special{flex:1 1 0;min-width:0;max-width:220px;padding:7px;justify-content:space-between;gap:4px;border:2px solid #e0f0fc}
+.olivia-kindergarten-v53 .olivia-special img{flex:1 1 auto;min-height:0;max-height:none;height:0;object-fit:contain}
+.olivia-kindergarten-v53 .olivia-special strong{flex:0 0 auto;font-size:16px}
+.olivia-kindergarten-v53 .olivia-lunch-inline{flex:1.25 1 0;max-width:340px;min-width:0;display:flex;align-items:center;gap:8px;padding:8px;border:2px solid #ffe0a9}
+.olivia-kindergarten-v53 .olivia-lunch-square{width:43%;height:100%;min-height:0;max-height:none;flex-shrink:0}
+.olivia-kindergarten-v53 .olivia-lunch-copy{flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px}
+.olivia-kindergarten-v53 .olivia-lunch-copy p{margin:0;font-size:13px}
+.olivia-kindergarten-v53 .olivia-lunch-read{font-size:12px;padding:7px 8px;border-radius:10px;border:0;background:#2581c4;color:white;font-weight:800;cursor:pointer}
+.olivia-v53-parent-header{padding:10px 18px}.olivia-v53-parent-header h2{margin:0}
+@media (width:800px) and (height:480px){.olivia-v53 .olivia-chore-card{height:225px}.olivia-v53 .olivia-count-4 .olivia-activity-card,.olivia-v53 .olivia-count-5 .olivia-activity-card{height:145px}.olivia-v53 .olivia-count-4 .olivia-activity-card{flex-basis:205px}.olivia-v53 .olivia-count-5 .olivia-activity-card{flex-basis:185px}}
+@media (max-width:700px){.olivia-v53-nav{gap:5px;padding:6px}.olivia-v53-nav button{font-size:13px;min-height:40px}.olivia-v53-footer{grid-template-columns:minmax(110px,1fr) 65px minmax(150px,1.5fr);padding:3px 6px;gap:3px;margin:0 5px 5px}.olivia-footer-date{font-size:11px}.olivia-footer-now{font-size:16px}.olivia-footer-now strong{font-size:15px}.olivia-footer-forecast>div{flex-wrap:wrap;gap:0}.olivia-footer-forecast small,.olivia-footer-forecast b{font-size:10px}.olivia-v53 .olivia-day-row{gap:5px}.olivia-v53 .olivia-activity-card{flex-basis:30vw;width:30vw}.olivia-v53 .olivia-count-1 .olivia-activity-card{flex-basis:55vw}.olivia-v53 .olivia-count-2 .olivia-activity-card{flex-basis:43vw}.olivia-v53 .olivia-week-grid{gap:3px}.olivia-v53 .olivia-week-day{padding:5px 1px}.olivia-v53 .olivia-week-number{font-size:17px}.olivia-v53 .olivia-week-label{font-size:10px}.olivia-v53 .olivia-chore-card{flex-basis:24%;height:190px}.olivia-kindergarten-v53 .olivia-special-grid{gap:5px}.olivia-kindergarten-v53 .olivia-lunch-read{font-size:10px}}
+/* Four cards deliberately use a 2×2 arrangement at kiosk size. */
+@media (min-width:701px){
+ .olivia-v53 .olivia-count-4 .olivia-activity-card{flex:0 0 38%;max-width:290px;height:calc(50% - 6px)}
+ .olivia-v53 .olivia-count-5 .olivia-activity-card{flex:0 0 29%;max-width:210px;height:calc(50% - 6px)}
+}
+/* Preserve the original in-child parent editor's ability to scroll. */
+.olivia-v53:has(.olivia-v53-parent-header) .olivia-v53-content{overflow-y:auto}
+.olivia-v53:has(.olivia-v53-parent-header) .olivia-parent{overflow:visible}
