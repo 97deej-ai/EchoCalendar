@@ -181,3 +181,17 @@
 /* Preserve the original in-child parent editor's ability to scroll. */
 .olivia-v53:has(.olivia-v53-parent-header) .olivia-v53-content{overflow-y:auto}
 .olivia-v53:has(.olivia-v53-parent-header) .olivia-parent{overflow:visible}
+
+/* V5.4: view-only day navigation and quiet-day illustration */
+.olivia-v53 .olivia-day-preview{display:flex;align-items:stretch;justify-content:center;gap:7px;flex:1;min-height:0;width:100%;padding:2px 3px}
+.olivia-v53 .olivia-day-preview>.olivia-day-row{flex:1;min-width:0;width:0}
+.olivia-v53 .olivia-day-arrow{width:38px;min-width:38px;height:66%;align-self:center;border:2px solid rgba(255,255,255,.9);border-radius:22px;background:rgba(255,255,255,.86);color:#287cc2;box-shadow:0 3px 10px rgba(39,113,169,.17);font-size:22px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;touch-action:manipulation}
+.olivia-v53 .olivia-day-arrow:active{background:#d5ecfc;transform:scale(.97)}
+.olivia-v53 .olivia-day-right{width:38px;min-width:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+.olivia-v53 .olivia-day-right .olivia-day-arrow{height:66%;flex:none}
+.olivia-v53 .olivia-day-today{font-size:10px;font-weight:900;padding:5px 2px;width:43px;border-radius:10px;border:1px solid #87c0e5;background:#fff;color:#165381;cursor:pointer}
+.olivia-v53 .olivia-empty-day{height:100%;min-height:0;max-width:min(100%,380px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-radius:20px;background:rgba(255,255,255,.92);padding:9px;box-shadow:0 4px 14px rgba(32,98,152,.13)}
+.olivia-v53 .olivia-empty-day img{height:0;flex:1 1 auto;min-height:0;max-width:100%;width:100%;object-fit:contain;border-radius:12px}
+.olivia-v53 .olivia-empty-day strong{font-size:16px;color:#174e7b;line-height:1.1}
+.olivia-preview-label{display:inline-block;margin-left:5px;font-size:10px;background:#e5f3ff;color:#226ca7;padding:2px 5px;border-radius:8px;vertical-align:middle}
+@media (max-width:700px){.olivia-v53 .olivia-day-preview{gap:3px}.olivia-v53 .olivia-day-arrow,.olivia-v53 .olivia-day-right{width:29px;min-width:29px}.olivia-v53 .olivia-day-arrow{font-size:16px}.olivia-v53 .olivia-day-today{width:32px;font-size:9px;padding:4px 1px}}
