@@ -83,8 +83,9 @@ export default function ParentDashboard({events,members,onManage,onExit,weather,
    const next=[...subscriptions,{url,name}];localStorage.setItem(SUB_STORE,JSON.stringify(next));setSubscriptions(next);setNewFeed('');setImportError('');
   }catch(err){setImportError(err instanceof Error?err.message:'Invalid URL')}
  };
+ const isParentEvent=(e:E):e is ParentEvent=>'source_kind' in e;
  const visible=(e:E)=>('source' in e)||('source_kind' in e)||pref.selected.length===0||pref.selected.includes(e.member_id||'everyone');
- const onDay=(s:string)=>availableEvents.filter(e=>visible(e)&&occursOn(e,s,new Set('source_kind' in e?(e.excluded_dates||[]):[]))&&(!search||`${e.title} ${e.notes||''} ${members.find(m=>m.id===e.member_id)?.name||''}`.toLowerCase().includes(search.toLowerCase()))).sort((a,b)=>(a.event_time||'').localeCompare(b.event_time||''));
+ const onDay=(s:string)=>availableEvents.filter(e=>visible(e)&&occursOn(e,s,new Set(isParentEvent(e)?(e.excluded_dates||[]):[]))&&(!search||`${e.title} ${e.notes||''} ${members.find(m=>m.id===e.member_id)?.name||''}`.toLowerCase().includes(search.toLowerCase()))).sort((a,b)=>(a.event_time||'').localeCompare(b.event_time||''));
  const color=(e:E)=>('source_kind' in e)?'#19a7a0':('source' in e)?'#9467b2':members.find(m=>m.id===e.member_id)?.color||'#5079a8';
  const navigate=(dir:number)=>{if(pref.mode==='month'){const d=date(focus);d.setDate(1);d.setMonth(d.getMonth()+dir);setFocus(iso(d))}else setFocus(add(focus,dir*(pref.mode==='week'?7:14)))};
  const update=(p:Partial<Pref>)=>setPref(v=>({...v,...p}));

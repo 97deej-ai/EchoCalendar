@@ -1,5 +1,5 @@
 /** Read-only ICS parsing for the parent interface. No imported event is written to Olivia's tables. */
-export type ImportedEvent={id:string;title:string;event_date:string;event_time:string|null;member_id:null;notes:string;repeat:string;icon:string;source:string;end_date?:string;all_day?:boolean;uid?:string};
+export type ImportedEvent={id:string;title:string;event_date:string;event_time:string|null;member_id:null;notes:string;repeat:string;icon:string;source:string;end_date?:string|null;all_day?:boolean;uid?:string};
 const unescape=(s:string)=>s.replace(/\\n/gi,'\n').replace(/\\,/g,',').replace(/\\;/g,';').replace(/\\\\/g,'\\');
 const datePart=(s:string)=>{const m=s.match(/^(\d{4})(\d{2})(\d{2})/);return m?`${m[1]}-${m[2]}-${m[3]}`:null};
 const timePart=(s:string)=>{const m=s.match(/^\d{8}T(\d{2})(\d{2})/);return m?`${m[1]}:${m[2]}`:null};
@@ -23,7 +23,7 @@ function expand(fields:Record<string,string>,source:string):ImportedEvent[]{
   for(let day=first,steps=0;day<=limit&&day<=until&&steps<732&&occurrences.length<count;day=next(day,1),steps++){
    const current=new Date(day+'T12:00:00');const delta=Math.round((+current-+start)/86400000);
    const months=(current.getFullYear()-start.getFullYear())*12+current.getMonth()-start.getMonth();
-   const byday=rules.BYDAY?.split(',').map(x=>x.replace(/^[+-]?\d+/,'')).filter(Boolean);
+   const byday=rules.BYDAY?.split(',').map((x:string)=>x.replace(/^[+-]?\d+/,'')).filter(Boolean);
    const matchesDay=!byday||byday.includes(weekday[current.getDay()]);
    const matchesMonth=!rules.BYMONTH||rules.BYMONTH.split(',').includes(String(current.getMonth()+1));
    const matchesDate=!rules.BYMONTHDAY||rules.BYMONTHDAY.split(',').includes(String(current.getDate()));
