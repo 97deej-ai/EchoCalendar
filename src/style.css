@@ -28,3 +28,8 @@
 .picture-manager-card label{font-size:12px;max-width:100%;overflow:hidden}
 .picture-manager-card input{width:100%;font-size:11px}
 .picture-manager-card button{font-size:12px}
+/* V6 parent is isolated; child components and CSS are unchanged. */
+.app.parent-host{max-width:none;padding:0;background:#f4f7fb}.parent-host>header,.parent-host>nav{display:none}.parent-host>main{padding:0}.parent-host .pd{width:100%}
+
+/* V6 parent management navigation; legacy forms remain unchanged. */
+.v6-manager{max-width:1250px;margin:auto}.v6-manager-intro{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:8px 0 20px}.v6-manager-intro h2{margin:5px 0}.v6-manager-intro p{opacity:.72;margin:0}.v6-manager-intro small{letter-spacing:.14em;font-weight:800;color:#5181ad}.v6-manager-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:9px;margin-bottom:22px}.v6-manager-nav button{border:1px solid #d8e3ec;border-radius:12px;padding:12px 10px;display:flex;align-items:center;gap:8px;justify-content:center;background:#fff;color:#243b51;font-weight:650;cursor:pointer}.v6-manager-nav button.v6-manager-active{background:#1e527b;color:#fff;border-color:#1e527b}.v6-manager-panel.v6-panel-hidden{display:none}.v6-manager-panel.v6-panel-visible{display:block}.v6-manager-body>.panel{max-width:100%}.v6-info-panel{padding:25px}.v6-info-panel p{max-width:65ch;line-height:1.6}@media(max-width:650px){.v6-manager-intro{align-items:flex-start;flex-direction:column}.v6-manager-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.v6-manager-nav button{font-size:12px;flex-direction:column;gap:3px;padding:9px 4px}.v6-manager-nav button span{font-size:21px}}
